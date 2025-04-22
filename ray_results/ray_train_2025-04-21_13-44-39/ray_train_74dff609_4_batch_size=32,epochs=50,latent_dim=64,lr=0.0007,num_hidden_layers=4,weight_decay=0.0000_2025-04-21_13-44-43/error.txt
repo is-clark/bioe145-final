@@ -1,0 +1,34 @@
+Failure # 1 (occurred at 2025-04-21_13-44-45)
+[36mray::ImplicitFunc.train()[39m (pid=13584, ip=127.0.0.1, actor_id=8a3cc65dae8e86e2841ab5e301000000, repr=ray_train)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/ray/tune/trainable/trainable.py", line 330, in train
+    raise skipped from exception_cause(skipped)
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/ray/air/_internal/util.py", line 107, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/ray/tune/trainable/function_trainable.py", line 45, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/ray/tune/trainable/function_trainable.py", line 261, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/var/folders/26/0017yn4d4515d4_v5jg7653m0000gn/T/ipykernel_13149/1717982637.py", line 2, in ray_train
+  File "/var/folders/26/0017yn4d4515d4_v5jg7653m0000gn/T/ipykernel_13149/2722018354.py", line 14, in __init__
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'processed_counts.csv'

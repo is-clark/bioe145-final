@@ -1,0 +1,10 @@
+{
+  "batch_size": 32,
+  "epochs": 50,
+  "latent_dim": 64,
+  "lr": 0.0009923168359697683,
+  "lr_reduce_rate": 0.2616601189970632,
+  "num_hidden_layers": 3,
+  "patience": 8,
+  "weight_decay": 0.24908034502482093
+}

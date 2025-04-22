@@ -1,0 +1,19 @@
+Failure # 1 (occurred at 2025-04-21_14-01-07)
+[36mray::ImplicitFunc.train()[39m (pid=13760, ip=127.0.0.1, actor_id=a9f5e7e94d21d011eb4399ca01000000, repr=ray_train)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/ray/tune/trainable/trainable.py", line 330, in train
+    raise skipped from exception_cause(skipped)
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/ray/air/_internal/util.py", line 107, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/ray/tune/trainable/function_trainable.py", line 45, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/ray/tune/trainable/function_trainable.py", line 261, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/var/folders/26/0017yn4d4515d4_v5jg7653m0000gn/T/ipykernel_13149/1451532661.py", line 18, in ray_train
+  File "/var/folders/26/0017yn4d4515d4_v5jg7653m0000gn/T/ipykernel_13149/1972142279.py", line 4, in epoch_train
+NameError: name 'device' is not defined

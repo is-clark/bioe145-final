@@ -1,0 +1,21 @@
+Failure # 1 (occurred at 2025-04-21_14-09-58)
+[36mray::ImplicitFunc.train()[39m (pid=14095, ip=127.0.0.1, actor_id=fa5d58dcd9062626d7b6ee4e01000000, repr=ray_train)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/ray/tune/trainable/trainable.py", line 330, in train
+    raise skipped from exception_cause(skipped)
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/ray/air/_internal/util.py", line 107, in run
+    self._ret = self._target(*self._args, **self._kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/ray/tune/trainable/function_trainable.py", line 45, in <lambda>
+    training_func=lambda: self._trainable_func(self.config),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/ray/tune/trainable/function_trainable.py", line 261, in _trainable_func
+    output = fn()
+             ^^^^
+  File "/var/folders/26/0017yn4d4515d4_v5jg7653m0000gn/T/ipykernel_13149/120597195.py", line 41, in ray_train
+  File "/Users/ian/1_Projects/hw/bioe145/final/.venv/lib/python3.12/site-packages/ray/train/_internal/session.py", line 663, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+TypeError: report() got an unexpected keyword argument 'val_loss'

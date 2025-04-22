@@ -5,12 +5,17 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "hyperopt>=0.2.7",
+    "matplotlib>=3.10.1",
     "numpy>=2.2.4",
     "pandas>=2.2.3",
+    "ray[tune]>=2.44.1",
     "scikit-learn>=1.6.1",
+    "seaborn>=0.13.2",
     "torch>=2.6.0",
     "torchvision>=0.21.0",
     "tqdm>=4.67.1",
+    "umap-learn>=0.5.7",
 ]
 
 [dependency-groups]
